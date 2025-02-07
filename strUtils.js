@@ -10,4 +10,12 @@ export function capitalize(str) {
     return str[0].toUpperCase() + str.slice(1);
 }
 
-// capitalize("capital");
+export function reverseString(str) {
+    if (typeof str !== "string") {
+        throw new TypeError("Input must be a string.");
+    }
+
+    const chars = Array.from(str);
+    chars.reverse();
+    return chars.join("");
+}

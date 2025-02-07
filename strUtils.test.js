@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import { capitalize } from "./strUtils";
+import { capitalize, reverseString } from "./strUtils";
 
 function testCapitalization() {
     test("Throws error if input is not a string", () => {
@@ -24,3 +24,26 @@ function testCapitalization() {
     });
 }
 describe("Capitalization module", testCapitalization);
+
+function testReverseString() {
+    test("Throws error if input is not a string", () => {
+        expect(() => {
+            reverseString(5);
+        }).toThrow(TypeError);
+
+        expect(() => {
+            reverseString(-5.5);
+        }).toThrow(TypeError);
+    });
+
+    test("Handles the empty string properly", () => {
+        expect(reverseString("")).toBe("");
+    });
+
+    test("Reverses the string", () => {
+        expect(reverseString("racecar")).toBe("racecar");
+        expect(reverseString("test")).toBe("tset");
+        expect(reverseString("5reversed")).toBe("desrever5");
+    });
+}
+describe("Reverse text module", testReverseString);
