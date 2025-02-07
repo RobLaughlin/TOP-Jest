@@ -119,7 +119,7 @@
     },
     "scripts": {
         "test": "jest",
-        "watch": "jest --watch /*.js"
+        "watch": "jest --watch --verbose /*.js"
     },
     "repository": {
         "type": "git",
