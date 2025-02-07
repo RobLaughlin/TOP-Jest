@@ -118,7 +118,7 @@
         "yallist": "^3.1.1"
     },
     "scripts": {
-        "test": "jest",
+        "test": "jest --verbose",
         "watch": "jest --watch --verbose /*.js"
     },
     "repository": {
